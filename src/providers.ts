@@ -3,7 +3,7 @@ import { getContract } from './utils'
 
 const connect = (): [string, providers.Provider, Wallet, any] => {
   // get network from args
-  const network = process.argv[2] || 'mainnet'
+  const network = 'mainnet'
 
   // set provider from infura & network
   const provider = new providers.InfuraProvider(

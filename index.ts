@@ -1,18 +1,8 @@
 const express = require('express')
-const { 
-    totalSupply,
-    burned,
-    circulatingSupply
-} = require('./src/routes')
+const { circulatingSupply} = require('./src/routes')
 
 const app = express()
 
-app.get('/', (req, res) => {
-    res.send('TrueFi API')
-})
-
-app.get('/totalSupply', totalSupply)
-app.get('/burned', burned)
 app.get('/circulatingSupply', circulatingSupply)
 
 

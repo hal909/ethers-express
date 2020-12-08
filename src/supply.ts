@@ -1,11 +1,7 @@
-import { ethers, utils, BigNumber, Contract } from 'ethers'
 import { connect } from './providers'
-import { getContract, fromTrustToken } from './utils'
-import { contracts, wallets } from './constants'
+import { contracts } from './constants'
 
 const [network, provider, wallet, contractAt] = connect()
-const TrustToken = contractAt('TrustToken', contracts.tru)
-
 
 
 // calculate circulating supply
@@ -31,7 +27,8 @@ export const getCirculatingSupply = async () => {
 
 
 // calculate total supply through tru contract
-export const getTotalSupply = async () => {
+const getTotalSupply = async () => {
+    const TrustToken = contractAt('TrustToken', contracts.tru)
     const tru = await TrustToken.connect(wallet)
     const supply = await tru.totalSupply()/1e8
     return supply
