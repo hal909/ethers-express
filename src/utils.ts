@@ -13,5 +13,3 @@ export const getContract = (wallet: ethers.Wallet) => (contractName: string, con
 
 export const wait = async <T>(tx: Promise<{wait: () => Promise<T>}>): Promise<T> => (await tx).wait()
 
-// TRU has 8 decimals of precision
-export const fromTrustToken = (amount: ethers.BigNumber) => fromEther(amount.mul(1e10))

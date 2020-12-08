@@ -12,19 +12,15 @@ export const getCirculatingSupply = async () => {
     const incentiveCirculating = await getIncentiveCirculating()
     const companyCirculating = getCompanyCirculating()
     const preSale = await getPreSale()
-
-    console.log('burned: '+burned)
-    console.log('teamCirculating: '+teamCirculating)
-    console.log('futureTeamCirculating: '+futureTeamCirculating)
-    console.log('incentiveCirculating: '+incentiveCirculating)
-    console.log('companyCirculating: '+companyCirculating)
-    console.log('preSale: '+preSale)
-
-
+    // console.log('burned: '+burned)
+    // console.log('teamCirculating: '+teamCirculating)
+    // console.log('futureTeamCirculating: '+futureTeamCirculating)
+    // console.log('incentiveCirculating: '+incentiveCirculating)
+    // console.log('companyCirculating: '+companyCirculating)
+    // console.log('preSale: '+preSale)
     const circulatingSupply = -burned+teamCirculating+futureTeamCirculating+incentiveCirculating+companyCirculating+preSale
     return circulatingSupply
 }
-
 
 // calculate total supply through tru contract
 const getTotalSupply = async () => {
@@ -64,7 +60,6 @@ const getFutureTeamCirculating = async () => {
 }
 
 const getIncentiveCirculating = async() => {
-
     const TOTAL_INCENTIVE = 565500000
 
     const truContract = contractAt('TrustToken', contracts.tru)
@@ -77,7 +72,6 @@ const getIncentiveCirculating = async() => {
     
     const incentiveCirculating = TOTAL_INCENTIVE-BAL_BAL_TRU-UNI_ETH_TRU-UNI_TUSD_LP-TrueFi_LP-TRU_Voters-NXM
     return incentiveCirculating
-
 }
 const getCompanyCirculating = () => {
     const TOTAL_COMPANY = 163082598
