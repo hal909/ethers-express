@@ -1,0 +1,12 @@
+GET http://localhost:3000/circulatingSupply
+
+###
+
+GET http://localhost:3000/
+
+
+
+###
+
+
+GET https://sheets.googleapis.com/v4/spreadsheets/2083521717/values/Sheet1!A1:D5

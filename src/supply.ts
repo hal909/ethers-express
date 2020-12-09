@@ -12,12 +12,12 @@ export const getCirculatingSupply = async () => {
     const incentiveCirculating = await getIncentiveCirculating()
     const companyCirculating = getCompanyCirculating()
     const preSale = await getPreSale()
-    // console.log('burned: '+burned)
-    // console.log('teamCirculating: '+teamCirculating)
-    // console.log('futureTeamCirculating: '+futureTeamCirculating)
-    // console.log('incentiveCirculating: '+incentiveCirculating)
-    // console.log('companyCirculating: '+companyCirculating)
-    // console.log('preSale: '+preSale)
+    console.log('burned: '+burned)
+    console.log('teamCirculating: '+teamCirculating)
+    console.log('futureTeamCirculating: '+futureTeamCirculating)
+    console.log('incentiveCirculating: '+incentiveCirculating)
+    console.log('companyCirculating: '+companyCirculating)
+    console.log('preSale: '+preSale)
     const circulatingSupply = -burned+teamCirculating+futureTeamCirculating+incentiveCirculating+companyCirculating+preSale
     return circulatingSupply
 }
