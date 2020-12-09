@@ -1,10 +1,10 @@
 {
   "name": "truefi-api",
   "version": "1.0.0",
-  "description": "TrueFi API",
+  "description": "TrueFi Circulating Supply API",
   "main": "index.js",
   "repository": "https://github.com/trusttoken/truefi-api.git",
-  "author": "Hal Hyatt <feewet@gmail.com>",
+  "author": "Hal Hyatt, Yubo Ruan",
   "license": "MIT",
   "compilerOptions": {
     "module": "esnext"
