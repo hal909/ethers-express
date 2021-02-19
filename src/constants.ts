@@ -24,7 +24,10 @@ export const contracts = {
     grantedButNotUnlocked: "0xFc293b1065f627EDFb600663652D42cd7A397029",
     options:"0xe387606dd76F6f502CB9eF4d79dCAb89eD04fCb2",
     futureTeam:"0x94E7B4c70E12Abb2516773F2F06471a3031C94A7",
-    preSaleToBeDist: "0x8b9cA4469C49ee4506b04315FFB6b21349052d67"
+    preSaleToBeDist: "0x8b9cA4469C49ee4506b04315FFB6b21349052d67",
+    multisig: '0x16cEa306506c387713C70b9C1205fd5aC997E78E',
+    stakingDistributor: '0x6151570934470214592AA051c28805cF4744BCA7',
+    stkTruDistributor: '0xecfD4F2C07EABdb7b592308732B59713728A957F'
 }
 
 export const wallets = {

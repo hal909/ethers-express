@@ -18,6 +18,7 @@ export const getCirculatingSupply = async () => {
     console.log('incentiveCirculating: '+incentiveCirculating)
     console.log('companyCirculating: '+companyCirculating)
     console.log('preSale: '+preSale)
+    
     const circulatingSupply = -burned+teamCirculating+futureTeamCirculating+incentiveCirculating+companyCirculating+preSale
     return circulatingSupply
 }
@@ -69,8 +70,11 @@ const getIncentiveCirculating = async() => {
     const TrueFi_LP = await truContract.balanceOf(contracts.tfiLpDistributor)/1e8
     const TRU_Voters = await truContract.balanceOf(contracts.creditMarketDistributor)/1e8
     const NXM = await truContract.balanceOf(contracts.nxmDistributor)/1e8
+    const MULTISIG = await truContract.balanceOf(contracts.multisig)/1e8
+    const STAKING_DISTRIBUTOR = await truContract.balanceOf(contracts.stakingDistributor)/1e8
+    const STK_TRU_DISTRIBUTOR = await truContract.balanceOf(contracts.stkTruDistributor)/1e8
     
-    const incentiveCirculating = TOTAL_INCENTIVE-BAL_BAL_TRU-UNI_ETH_TRU-UNI_TUSD_LP-TrueFi_LP-TRU_Voters-NXM
+    const incentiveCirculating = TOTAL_INCENTIVE-BAL_BAL_TRU-UNI_ETH_TRU-UNI_TUSD_LP-TrueFi_LP-TRU_Voters-NXM-MULTISIG-STAKING_DISTRIBUTOR-STK_TRU_DISTRIBUTOR
     return incentiveCirculating
 }
 const getCompanyCirculating = () => {
